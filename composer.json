@@ -1,0 +1,19 @@
+{
+    "name": "xtend-laravel/feature-lunar-hub-custom-theme",
+    "description": "Lunar Hub Custom Theme",
+    "type": "xtend-feature",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "XtendLunar\\Features\\HubCustomTheme\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Adam Lee",
+            "email": "adam@codelabx.ltd"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
