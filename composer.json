@@ -14,13 +14,6 @@
             "email": "adam@codelabx.ltd"
         }
     ],
-    "extra": {
-        "laravel": {
-            "providers": [
-                "XtendLunar\\Features\\HubCustomTheme\\HubCustomThemeProvider"
-            ]
-        }
-    },
     "minimum-stability": "dev",
     "require": {}
 }
