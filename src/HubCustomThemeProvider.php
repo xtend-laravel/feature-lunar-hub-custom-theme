@@ -12,17 +12,14 @@ class HubCustomThemeProvider extends XtendFeatureProvider
 {
     public function register()
     {
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'adminhub');
         $this->withRegisterTranslations();
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'adminhub');
     }
 
     protected function withRegisterTranslations(): void
     {
+        $this->app['path.lang'] = __DIR__.'/../resources/lang';
         $this->app->register(TranslationServiceProvider::class);
-        $this->app->singleton('translation.loader', function ($app) {
-            $app['path.lang'] = __DIR__.'/../resources/lang';
-            return new FileLoader($app['files'], $app['path.lang']);
-        });
 
         // @todo This overrides all translations so need a condition to make sure this is only loaded for the hub
         // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'adminhub');
@@ -36,10 +33,5 @@ class HubCustomThemeProvider extends XtendFeatureProvider
                 'vite' => ['resources/css/hub-extend.css', 'resources/js/hub-extend.js'],
             ]);
         });
-    }
-
-    public function provides()
-    {
-        return ['translation.loader'];
     }
 }
