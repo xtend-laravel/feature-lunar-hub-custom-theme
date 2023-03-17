@@ -65,8 +65,12 @@
 
     <div class="flex h-full">
 
-        <!-- Custom side menu to be replaced later with <x-hub::menus.app-side /> -->
-        @include('adminhub::partials.navigation.side-menu')
+        @feature('sidebar-menu')
+            <!-- @todo improve either create livewire component or blade component -->
+            @include('adminhub::partials.navigation.side-menu')
+        @else
+            <x-hub::menus.app-side />
+        @endfeature
 
         <div class="flex min-w-0 flex-1 flex-col overflow-hidden">
 
