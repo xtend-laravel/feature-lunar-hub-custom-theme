@@ -139,46 +139,9 @@
                     @livewire('hub.components.orders.table', [
                         'searchable' => false,
                         'filterable' => false,
-                        'query' => $this->recentOrders,
                     ])
                 </div>
             </div>
-            {{--            <div class="basis-1/3"> --}}
-            {{--                <div class="p-8 bg-white rounded-lg h-96"> --}}
-            {{--                    <h3 class="text-lg font-semibold text-gray-900"> --}}
-            {{--                        {{ __('adminhub::catalogue.customer.dashboard.top_selling_products') }}</h3> --}}
-
-            {{--                    @foreach ($this->topSellingProducts as $product) --}}
-            {{--                        <div class="relative flex items-center py-8 space-x-3 bg-white border-b border-slate-100"> --}}
-            {{--                            <div class="flex-shrink-0"> --}}
-            {{--                                @if ($thumbnail = $product->purchasable->getThumbnail()) --}}
-            {{--                                    <img src="{{ $thumbnail }}" --}}
-            {{--                                         class="w-24 h-24 rounded-lg" /> --}}
-            {{--                                @else --}}
-            {{--                                    <x-hub::icon ref="photograph" --}}
-            {{--                                                 class="w-24 h-24 text-gray-200 rounded-lg" /> --}}
-            {{--                                @endif --}}
-
-            {{--                            </div> --}}
-            {{--                            <div class="flex-1 min-w-0"> --}}
-            {{--                                <a href="#" --}}
-            {{--                                   class="focus:outline-none"> --}}
-            {{--                                    <span class="absolute inset-0" --}}
-            {{--                                          aria-hidden="true"></span> --}}
-            {{--                                    <p class="text-sm font-medium text-gray-900"> --}}
-            {{--                                        {{ $product->purchasable->getDescription() }} --}}
-            {{--                                        <span --}}
-            {{--                                              class="block text-sm">{{ $product->purchasable->getIdentifier() }}</span> --}}
-            {{--                                    </p> --}}
-            {{--                                    <p class="text-sm text-gray-500 truncate"> --}}
-            {{--                                        {{ $product->count }} orders --}}
-            {{--                                    </p> --}}
-            {{--                                </a> --}}
-            {{--                            </div> --}}
-            {{--                        </div> --}}
-            {{--                    @endforeach --}}
-            {{--                </div> --}}
-            {{--            </div> --}}
         </div>
     </div>
 </div>
