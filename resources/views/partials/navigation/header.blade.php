@@ -13,9 +13,11 @@
             </a>
         </div>
         <div class="lg:flex lg:items-center lg:justify-end">
-            <div class="mt-3 px-4">
-                @livewire('hub.components.switch-language')
-            </div>
+            @feature('language-switch')
+                <div class="mt-3 px-4">
+                    @livewire('hub.components.language-switch')
+                </div>
+            @endfeature
             <div class="mt-1 flex items-center">
                 <button type="button">
                     <x-tabler-help class="h-6 w-6 text-black" />
