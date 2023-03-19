@@ -64,13 +64,7 @@
     {!! \Lunar\Hub\LunarHub::paymentIcons() !!}
 
     <div class="flex h-full">
-
-        @feature('sidebar-menu')
-            <!-- @todo improve either create livewire component or blade component -->
-            @include('adminhub::partials.navigation.side-menu')
-        @else
-            <x-hub::menus.app-side />
-        @endfeature
+        <x-hub::menus.app-side />
 
         <div class="flex min-w-0 flex-1 flex-col overflow-hidden">
 
