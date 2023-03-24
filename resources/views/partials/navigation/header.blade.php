@@ -29,16 +29,16 @@
                 </button>
             </div>
             <div class="mt-3 flex items-center px-3">
-                @livewire('system.notifications')
+                {{--@livewire('system.notifications')--}}
             </div>
             <div class="mx-4">
                 @include('adminhub::partials.navigation.header-user-dropdown')
             </div>
             <div class="ml-4 flex h-16 items-center bg-[#222b39] px-4 pt-2 pr-3">
                 @if (str(request()->route()->getName())->endsWith('.show'))
-                    @livewire('hub.components.timeline')
+                    {{--@livewire('hub.components.timeline')--}}
                 @else
-                    @livewire('staff.notifications')
+                    {{--@livewire('staff.notifications')--}}
                 @endif
             </div>
         </div>
