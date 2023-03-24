@@ -92,7 +92,7 @@
     {{--@livewire('hub-license')--}}
 
     <!-- @todo Add feature flag check for hub notification. -->
-    @livewire('system.real-time-notifications')
+    {{--@livewire('system.real-time-notifications')--}}
 
     <x-hub::notification />
 
