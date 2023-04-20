@@ -21,12 +21,10 @@
     <!-- Note: This should be behind a feature flag disabled if filament tables is used -->
     @livewireTableStyles
 
-    <!-- Note: We do not use the default app.css file, but instead use the Vite version. -->
-    {{--<link href="{{ asset('vendor/lunar/admin-hub/app.css?v=1') }}" rel="stylesheet">--}}
+    @vite(['resources/css/hub-extend.css', 'resources/js/hub-extend.js'])
 
-    @if ($viteSupport ?? false)
-        @vite($vite ?? [])
-    @endif
+    <!-- Note: We do not use the default app.css file, but instead use the Vite version. -->
+    <link href="{{ asset('vendor/lunar/admin-hub/app.css?v=1') }}" rel="stylesheet">
 
     @if ($styles = \Lunar\Hub\LunarHub::styles())
         @foreach ($styles as $asset)

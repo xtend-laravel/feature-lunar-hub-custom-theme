@@ -30,13 +30,6 @@ class HubCustomThemeProvider extends XtendFeatureProvider
     public function boot()
     {
         $this->registerThemeComponents();
-
-        View::composer('adminhub::*', function (\Illuminate\View\View $view) {
-            $view->with([
-                'viteSupport' => Blade::defaultAliases()->keys()->contains('Vite'),
-                'vite' => ['resources/css/hub-extend.css', 'resources/js/hub-extend.js'],
-            ]);
-        });
     }
 
     protected function registerThemeComponents(): void
