@@ -24,7 +24,7 @@
     @vite(['resources/css/hub-extend.css', 'resources/js/hub-extend.js'])
 
     <!-- Note: We do not use the default app.css file, but instead use the Vite version. -->
-    <link href="{{ asset('vendor/lunar/admin-hub/app.css?v=1') }}" rel="stylesheet">
+    {{--<link href="{{ asset('vendor/lunar/admin-hub/app.css?v=1') }}" rel="stylesheet">--}}
 
     @if ($styles = \Lunar\Hub\LunarHub::styles())
         @foreach ($styles as $asset)
