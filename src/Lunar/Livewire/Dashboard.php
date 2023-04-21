@@ -1,6 +1,6 @@
 <?php
 
-namespace XtendLunar\Features\HubCustomTheme\Livewire;
+namespace XtendLunar\Features\HubCustomTheme\Lunar\Livewire;
 
 use Illuminate\Support\Facades\DB;
 use Lunar\Models\Customer;

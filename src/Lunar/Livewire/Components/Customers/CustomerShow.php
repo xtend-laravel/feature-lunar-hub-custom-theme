@@ -1,6 +1,6 @@
 <?php
 
-namespace XtendLunar\Features\HubCustomTheme\Livewire\Components\Customers;
+namespace XtendLunar\Features\HubCustomTheme\Lunar\Livewire\Components\Customers;
 
 use Lunar\Hub\Http\Livewire\Components\Customers\CustomerShow as LunarCustomerShow;
 //use XtendLunar\Features\FormBuilder\Livewire\Concerns\HasForms;

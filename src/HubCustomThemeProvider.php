@@ -5,17 +5,18 @@ namespace XtendLunar\Features\HubCustomTheme;
 use CodeLabX\XtendLaravel\Base\XtendFeatureProvider;
 use CodeLabX\XtendLaravel\Services\Translation\TranslationServiceProvider;
 use Illuminate\Support\Facades\Blade;
-use Illuminate\Support\Facades\View;
 use Livewire\Livewire;
-use XtendLunar\Features\HubCustomTheme\Livewire\Components\Customers\CustomerShow;
-use XtendLunar\Features\HubCustomTheme\Livewire\Dashboard;
+use XtendLunar\Features\HubCustomTheme\Lunar\Livewire\Components\Customers\CustomerShow;
+use XtendLunar\Features\HubCustomTheme\Lunar\Livewire\Dashboard;
 
 class HubCustomThemeProvider extends XtendFeatureProvider
 {
     public function register()
     {
         $this->withRegisterTranslations();
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'adminhub');
+        $this->loadViewsFrom(__DIR__.'/../resources/views/lunar', 'adminhub');
+        $this->loadViewsFrom(__DIR__.'/../resources/views/addons', 'hub.addons');
+        $this->loadViewsFrom(__DIR__.'/../resources/views/features', 'hub.features');
     }
 
     protected function withRegisterTranslations(): void
@@ -29,6 +30,9 @@ class HubCustomThemeProvider extends XtendFeatureProvider
 
     public function boot()
     {
+        Blade::componentNamespace('XtendLunar\Features\HubCustomTheme\Lunar\Components', 'hub-custom-theme');
+        Blade::componentNamespace('XtendLunar\Features\HubCustomTheme\Features\SidebarMenu\Components', 'hub.feature.sidebar-menu');
+
         $this->registerThemeComponents();
     }
 

@@ -65,7 +65,7 @@
     {!! \Lunar\Hub\LunarHub::paymentIcons() !!}
 
     <div class="flex h-full">
-        <x-hub::menus.app-side />
+        <x-hub.feature.sidebar-menu::menus.app-side />
 
         <div class="flex min-w-0 flex-1 flex-col overflow-hidden">
 
@@ -81,9 +81,8 @@
 
                 @yield('menu')
 
-                <!-- @todo Check if this is being used? -->
                 @if ($menu ?? false)
-                    @include('adminhub::partials.navigation.side-menu-nested')
+                    @include('hub.features::sidebar-menu.menus.side-menu-nested')
                 @endif
             </main>
         </div>
