@@ -6,7 +6,7 @@
             this.checkActiveRoute()
         },
         checkActiveRoute() {
-            const activeSection = document.querySelector('.section-items .active').dataset.groupHandle
+            const activeSection = document.querySelector('.section-items .active')?.dataset.groupHandle
             this.showSubMenu['{{ $group->handle }}'] = activeSection === '' && '{{ $group->handle }}' === 'hub.catalogue'
             if (activeSection === '{{ $group->handle }}') {
                 this.showSubMenu['{{ $group->handle }}'] = true
