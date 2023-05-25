@@ -24,8 +24,8 @@
     @vite(['resources/css/hub-extend.css', 'resources/js/hub-extend.js'])
 
     <!-- Note: We do not use the default app.css file, but instead use the Vite version. -->
-    <!-- @todo Styles conflict especially with filament tables so only use this for product section -->
-    @if (request()->routeIs('hub.products.show'))
+    <!-- @todo Styles conflict especially with filament tables so only use this with show sections for now -->
+    @if (request()->routeIs('hub.*.show'))
         <link href="{{ asset('vendor/lunar/admin-hub/app.css?v=1') }}" rel="stylesheet">
     @endif
 

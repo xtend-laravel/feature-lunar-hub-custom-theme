@@ -101,7 +101,8 @@
                         </div>
                     </header>
                     <div class="h-80 p-6">
-                        @livewire('hub.components.reporting.apex-chart', ['options' => $this->salesPerformance], key('sales-performance-'.time()))
+                        @livewire('hub.components.reporting.apex-chart', ['options' => $this->customerGroupOrders])
+{{--                        @livewire('hub.components.reporting.apex-chart', ['options' => $this->salesPerformance], key('sales-performance-'.time()))--}}
                     </div>
                 </div>
             </div>

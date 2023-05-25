@@ -9,12 +9,6 @@ use Lunar\Models\Order;
 
 class Dashboard extends \Lunar\Hub\Http\Livewire\Dashboard
 {
-    public function mount()
-    {
-        $this->range['from'] = $this->range['from'] ?? now()->startOfMonth()->format('Y-m-d');
-        $this->range['to'] = $this->range['too'] ?? now()->endOfWeek()->format('Y-m-d');
-    }
-
     /**
      * Return computed property for customer group orders.
      *
@@ -57,8 +51,8 @@ class Dashboard extends \Lunar\Hub\Http\Livewire\Dashboard
                 '=',
                 'ccg.customer_id'
             )->whereBetween('placed_at', [
-                now()->parse($this->range['from']),
-                now()->parse($this->range['to']),
+                now()->parse($this->from),
+                now()->parse($this->to),
             ])->groupBy('ccg.customer_group_id')
             ->get();
 

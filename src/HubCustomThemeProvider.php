@@ -30,8 +30,8 @@ class HubCustomThemeProvider extends XtendFeatureProvider
 
     public function boot()
     {
-        Blade::componentNamespace('XtendLunar\Features\HubCustomTheme\Lunar\Components', 'hub-custom-theme');
-        Blade::componentNamespace('XtendLunar\Features\HubCustomTheme\Features\SidebarMenu\Components', 'hub.feature.sidebar-menu');
+        //Blade::componentNamespace('XtendLunar\\Features\\HubCustomTheme\\Lunar\\Components', 'hub-custom-theme');
+        Blade::componentNamespace('XtendLunar\\Features\\HubCustomTheme\\Features\\SidebarMenu\\Components', 'hub.feature.sidebar-menu');
 
         $this->registerThemeComponents();
     }
